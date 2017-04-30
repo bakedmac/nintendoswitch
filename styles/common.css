@@ -1,0 +1,150 @@
+body{
+	font-family: sans-serif;
+	overflow-x: hidden;
+}
+#header-div{
+	height: 80px;
+	background-color: #DE0000;
+	position: fixed;
+	width: 100%;
+    top: 0;
+    z-index: 1;
+}
+#contents-div{
+	margin-top: 80px;
+}
+#logo-image{
+	height: 100%;
+	float: left;
+	display: inline-block;
+}
+#menu-holder{
+	display: block;
+	width: auto;
+	overflow: hidden;
+}
+#menu-holder, #menu, #menu>a{
+	height: 100%;
+}
+#menu>a{
+	color: white;
+	text-decoration: none;
+	height: 100%;
+	display: table;
+	text-align: center;
+}
+#menu>a:hover{
+	background-color: #c60000;
+}
+#menu>a>span{
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 1.2em;
+}
+.p_0{
+	padding: 0;
+}
+.box-image{
+	width: 100%;
+}
+.box-image-holder, .box-text-holder{
+	text-align: center;
+}
+.box-image-holder, .box-text-holder{
+    position: absolute;
+}
+#box-2-text-holder{
+	width: 34%;
+    right: 0;
+    top: 15%;
+    color: white;
+}
+.box{
+	position: relative;
+	height: calc(100vh - 80px);
+	min-height: 480px;
+}
+.box-text-title{
+	font-size: 2.5em;
+	font-weight: bold;
+}
+.box-button-holder>a{
+	text-decoration: none;
+	background-color: #DE0000;
+	color: white;
+	padding: 0.8em 0.8em;
+	font-size: 1.3em;
+/* 	font-weight: bold; */
+}
+.box-button-holder>a:hover{
+/* 	color: #DE0000; */
+	background-color: #c60000;
+}
+.fade-in{
+	display: none;
+}
+#box-2-image-holder{
+	width: 100%;
+	top: 0;
+}
+@media screen and (orientation:landscape){	
+	#box-1-image-holder{
+	    width: 75%;
+	    top: 15%;
+	}
+	#box-1-text-holder{
+		width: 25%;
+	    right: 0;
+	    top: 25%;
+	}
+	.box-text-title{
+		margin-bottom: 1.2em;
+	}
+}
+@media screen and (orientation:landscape) and (max-width: 960px){	
+	.box-text-title{
+		margin-bottom: 1.2em;
+	}
+}
+@media screen and (orientation:portrait){
+	
+	.box-text-title{
+		margin-bottom: 0.5em;
+	}
+}
+@media screen and (orientation:landscape) and (max-width: 960px),
+screen and (orientation:portrait){
+	#box-1-image-holder {
+	    width: 100%;
+	    bottom: 0;
+	}
+	#box-1-text-holder {
+	    width: 100%;
+	    right: 0;
+	    top: 5%;
+	    text-align: right;
+	    padding-right: 1em;
+	}
+	.box-image{
+		display: none;
+	}
+	.box-image-holder, .box-image-parent{
+	    height: 100%
+	}
+	.box-image-parent{
+	    height: 100%;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    background-position-x: 50%;
+	}
+	#box-1-image-parent{
+	    background-image: url('../images/switch.jpg');
+	}
+	#box-2-image-parent{
+	    background-image: url('../images/switch-car.jpg');
+	}
+	#box-2-text-holder {
+	    width: 100%;
+	    top: 5%;
+	}
+}
