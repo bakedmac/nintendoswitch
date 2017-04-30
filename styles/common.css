@@ -5,6 +5,7 @@ body{
 #body-div{
 	height: 100vh;
 	overflow-y: auto;
+	overflow-x: hidden;
 }
 #header-div{
 	height: 80px;

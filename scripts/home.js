@@ -52,9 +52,11 @@ function bindWindowScroll(){
 	        	   $(this).addClass("active-box")
 	        	   var position = $(this).offset().top - $("#contents-div").offset().top;
 	        	   console.log($(this).attr("id") + " is visible")
-	        	   console.log(position);
+//	        	   console.log(position);
+//	        	   unbindWindowScroll();
 	        	   $("#body-div").animate({ scrollTop: position }, "slow", function(){
 	        		   fadeInItemsInBox(box);
+//	        		   bindWindowScroll();
 	        	   });
 	        	   
 	           }
