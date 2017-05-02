@@ -45,28 +45,21 @@ function unfadeItemsInBox(box){
 }
 function bindWindowScroll(){
 	$("#body-div").scroll(function() {
-	    $(".box").each(function() {
+	    $(".box").not(".active-box").each(function() {
 	        if (isScrolledIntoView(this)) {
-	           if(!$(this).hasClass("active-box")){
 	        	   var box = $(this);
+	        	   var previousBox = $(".active-box");
+	        	   $(".active-box").removeClass("active-box");
 	        	   $(this).addClass("active-box")
 	        	   var position = $(this).offset().top - $("#contents-div").offset().top;
 	        	   console.log($(this).attr("id") + " is visible")
-//	        	   console.log(position);
-//	        	   unbindWindowScroll();
+	        	   unbindWindowScroll();
 	        	   $("#body-div").animate({ scrollTop: position }, "slow", function(){
 	        		   fadeInItemsInBox(box);
-//	        		   bindWindowScroll();
+	        		   unfadeItemsInBox(previousBox);
+	        		   bindWindowScroll();
 	        	   });
 	        	   
-	           }
-	        }else{
-	        	if($(this).hasClass("active-box")){
-	        		$(this).removeClass("active-box")
-	        		console.log($(this).attr("id") + " is invisible")
-	        		unfadeItemsInBox($(this))
-	        	}
-	        	
 	        }
 	    });
 	});
