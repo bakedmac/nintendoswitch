@@ -160,3 +160,17 @@ screen and (orientation:portrait){
 	    padding: 0 1em;
 	}
 }
+#loading-screen{
+	background-color: black;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	z-index: 10;
+	display: table;
+}
+#loading-image-holder{
+	margin-top: 45vh;
+}
+#loading-text{
+	color: white;
+}

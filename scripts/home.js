@@ -7,6 +7,9 @@ $(document).ready(function(){
 	bindWindowScroll();
 })
 
+$(window).on("load", function() {
+   $("#loading-screen").hide();
+});
 
 
 function isScrolledIntoView(elem)
