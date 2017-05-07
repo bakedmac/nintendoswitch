@@ -1,14 +1,16 @@
 $(document).ready(function(){
-	$("#body-div").scrollTop(1);
-	$("#body-div").scrollTop(0);
-	$(".box").each(function(){
-		unfadeItemsInBox($(this));
-	})
-	bindWindowScroll();
+	
 })
 
 $(window).on("load", function() {
-   $("#loading-screen").hide();
+   $("#loading-screen").fadeOut('slow', function(){
+	   $("#body-div").scrollTop(1);
+		$("#body-div").scrollTop(0);
+		$(".box").each(function(){
+			unfadeItemsInBox($(this));
+		})
+		bindWindowScroll();
+   });
 });
 
 
