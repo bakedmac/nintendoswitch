@@ -4,6 +4,7 @@ $(document).ready(function(){
 
 $(window).on("load", function() {
    $("#loading-screen").fadeOut('slow', function(){
+	   setBoxHeights();
 	   $("#body-div").scrollTop(1);
 		$("#body-div").scrollTop(0);
 		$(".box").each(function(){
@@ -104,7 +105,16 @@ function enableScroll() {
     if (window.removeEventListener)
         window.removeEventListener('DOMMouseScroll', preventDefault, false);
     window.onmousewheel = document.onmousewheel = null; 
-    window.onwheel = null; 
+    window.onwheel = null;
     window.ontouchmove = null;  
     document.onkeydown = null;  
+}
+
+function setBoxHeights(){
+	$(".box").each(function(){
+		var imageHolderHeight = $(this).find(".box-image-holder").outerHeight();
+		if(imageHolderHeight > 480){
+			$(this).css("min-height",imageHolderHeight+"px");
+		}
+	})
 }

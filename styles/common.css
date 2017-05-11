@@ -58,12 +58,6 @@ body{
 .box-image-holder, .box-text-holder{
     position: absolute;
 }
-#box-2-text-holder{
-	width: 34%;
-    right: 0;
-    top: 15%;
-    color: white;
-}
 .box{
 	position: relative;
 	height: calc(100vh - 80px);
@@ -91,6 +85,20 @@ body{
 #box-2-image-holder{
 	width: 100%;
 	top: 0;
+}
+#box-2-text-holder{
+	width: 34%;
+    right: 0;
+    top: 15%;
+    color: white;
+}
+#box-3-image-holder{
+	width: 100%;
+	bottom: 0;
+}
+#box-3-text-holder{
+	width: 100%;
+    top: 3%;
 }
 @media screen and (orientation:landscape){	
 	#box-1-image-holder{
